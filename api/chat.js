@@ -1,12 +1,4 @@
-export default async function handler(req, res) {
-  if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' });
-  }
-
-  const { messages, lang } = req.body;
-
-  const systemPrompts = {
-    en: `You are a precise and helpful travel guide for Otaru, Hokkaido, Japan.
+guide for Otaru, Hokkaido, Japan.
 
 CRITICAL RULES:
 - NEVER invent or hallucinate restaurant names, shop names, or specific addresses
